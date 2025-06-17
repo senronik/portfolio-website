@@ -3,7 +3,6 @@ import { cn } from "@/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import ServiceCard from '../Services/ServiceCard'; // Import your ServiceCard
-import Image from 'next/image';
 
 interface ServiceItem {
   icon: string;
@@ -18,7 +17,7 @@ export const HoverEffect = ({
   items: ServiceItem[];
   className?: string;
 }) => {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <div
